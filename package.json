@@ -1,0 +1,32 @@
+{
+  "name": "single-spa-riot",
+  "version": "0.0.1",
+  "description": "a single-spa plugin for riot.js applications",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "node ./build/build.js",
+    "commit": "npx git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariesjia/single-spa-riot.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ariesjia/single-spa-riot/issues"
+  },
+  "homepage": "https://github.com/ariesjia/single-spa-riot#readme",
+  "devDependencies": {
+    "riot": "^4.3.2",
+    "rollup": "^1.14.2",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "rollup-plugin-uglify": "^6.0.2",
+    "typescript": "^3.4.5",
+    "zlib": "^1.0.5"
+  },
+  "dependencies": {}
+}
