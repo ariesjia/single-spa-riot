@@ -23,7 +23,7 @@ export const unmount = riotLifecycles.unmount;
 
 ## Options
 
-All options are passed to single-spa-vue via the `opts` parameter when calling `singleSpaVue(opts)`. The following options are available:
+All options are passed to single-spa-riot via the `opts` parameter when calling `singleSpaRiot(opts)`. The following options are available:
 
 - `domElementGetter`: (required) the callback to get root component mount element.
 - `rootComponent`: (optional and replaces `appOptions.loadRootComponent`) the root riot component.
