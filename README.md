@@ -2,6 +2,10 @@
 
 Generic lifecycle hooks for Riot.js applications that are registered as [applications](https://github.com/CanopyTax/single-spa/blob/master/docs/applications.md#registered-applications) of [single-spa](https://github.com/CanopyTax/single-spa).
 
+[![NPM](https://img.shields.io/npm/v/single-spa-riot.svg)](https://www.npmjs.com/package/single-spa-riot)
+[![Build Status](https://travis-ci.org/ariesjia/single-spa-riot.svg?branch=master)](https://travis-ci.org/ariesjia/single-spa-riot)
+[![minified](https://badgen.net/bundlephobia/min/single-spa-riot)](https://bundlephobia.com/result?p=single-spa-riot)
+
 ## Installation
 ```sh
 npm install --save single-spa-riot
