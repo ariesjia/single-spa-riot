@@ -44,13 +44,7 @@ function mount(opts: SingleSpaRiotOptions, mountedInstances: MountedInstances, p
   return Promise
     .resolve()
     .then(() => {
-
       const domElementGetter = chooseDomElementGetter(opts, props)
-
-      if (!domElementGetter) {
-        throw new Error(`Cannot mount riot application '${props.appName || props.name}' without a domElementGetter provided in either opts or props`)
-      }
-
       const domElement = getRootDomEl(domElementGetter)
       const mountApp = opts.rootComponent as SingleSpaRiotRootComponent
       mountedInstances.instance = mountApp(domElement, props)
@@ -74,13 +68,29 @@ function unmount(opts: SingleSpaRiotOptions, mountedInstances: MountedInstances)
 }
 
 function chooseDomElementGetter(opts: SingleSpaRiotOptions, props) {
+  const name = props.appName || props.name
   props = props && props.customProps ? props.customProps : props
   if (props.domElement) {
     return () => props.domElement
   } else if (props.domElementGetter) {
     return props.domElementGetter
-  } else {
+  } else if(opts.domElementGetter) {
     return opts.domElementGetter
+  }
+  return defaultDomElementGetter(name)
+}
+
+function defaultDomElementGetter(name) {
+  const htmlId = `single-spa-application:${name}`
+
+  return function defaultDomEl() {
+    let domElement = document.getElementById(htmlId)
+    if (!domElement) {
+      domElement = document.createElement('div')
+      domElement.id = htmlId
+      document.body.appendChild(domElement)
+    }
+    return domElement
   }
 }
 
