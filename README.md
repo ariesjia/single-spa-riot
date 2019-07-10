@@ -2,6 +2,11 @@
 
 Generic lifecycle hooks for Riot.js applications that are registered as [applications](https://github.com/CanopyTax/single-spa/blob/master/docs/applications.md#registered-applications) of [single-spa](https://github.com/CanopyTax/single-spa).
 
+## Installation
+```sh
+npm install --save single-spa-riot
+```
+
 ## Usage
 
 ```js
