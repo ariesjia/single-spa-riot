@@ -28,5 +28,6 @@
     "typescript": "^3.4.5",
     "zlib": "^1.0.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "packageManager": "pnpm@9.11.0"
 }
